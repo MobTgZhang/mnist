@@ -121,18 +121,5 @@ def main():
     pic_save = "accuracy.png"
     acc_file = "accuracy.txt"
     save_config(test_loss_list,save_path,pic_save,acc_file)
-    '''
-    # save the plot picture
-    save_path = "torch_save"
-    pic_save = "accuracy.png"
-    x = np.linspace(0,len(test_loss_list),len(test_loss_list))
-    plt.plot(x,test_loss_list)
-    plt.savefig(os.path.join(save_path,pic_save))
-    plt.show()
-    acc_file = "accuracy.txt"
-    with open(os.path.join(save_path,acc_file),"w") as fp:
-        for k in range(len(test_loss_list)):
-            fp.write(str(test_loss_list[k]) + "\n")
-    '''
 if __name__ == '__main__':
     main()
